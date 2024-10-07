@@ -2,8 +2,8 @@ const mongoose =require("mongoose")
 
 const studentSchema = new mongoose.Schema({
     college:String,
-    user:{type:mongoose.Schema.Types.ObjectId,ref:"Users"},
-    department:{type:mongoose.Schema.Types.ObjectId,ref:"Departments"}
+    user_id:{type:mongoose.Schema.Types.ObjectId,ref:"user"},
+    department_id:{type:mongoose.Schema.Types.ObjectId,ref:"department"}
 }) 
 
 const Students = mongoose.model('student',studentSchema)

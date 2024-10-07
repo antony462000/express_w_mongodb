@@ -6,11 +6,8 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
 
-         app.listen(port,()=>{
-            console.log(`localhost listening at http://localhost:${port}/`)
+ app.listen(port,()=>{
+      console.log(`localhost listening at http://localhost:${port}/`)
         })
-
-
-console.log("JJJJJJJJ")
 
 app.use("/user",router)

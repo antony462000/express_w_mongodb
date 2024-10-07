@@ -1,10 +1,11 @@
 const signIn = require("../services/signIn")
 const responder = require("../shared/responder")
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
     const Responder = new responder(res)
     try {
-        var signinUser = signIn(req.body)
+        var signinUser = await signIn(req.body)
+        
         Responder.success({ message: "Successfully Logged in", payload: signinUser })
   
     } catch (error) {

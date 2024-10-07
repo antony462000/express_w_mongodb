@@ -1,27 +1,27 @@
-const { User, Student,Department } = require("../models")
+const { User, Student, Department } = require("../models")
 
-module.exports = async (data) =>{
+module.exports = async (data) => {
     try {
-        const user= await User.insertMany({
-            name:data.name,
-            email:data.email,
-            password:data.password
+        const dept = await Department.findOne({
+            deptName: data.deptName
         })
-        
-        const student= await Student.insertMany({
-            college:data.college,
-            user:user.id,
-        })
-        
-        const Departments= await Department.insertMany({
-            deptName:data.deptName
-        })
-        console.log(data.name)
+        if (!dept) throw new Error("NO DEPARTMENT")
 
-        return "Succesfull"
-              
-            } catch (error) {
-                console.log(error)
-            }
-    
+        const user = await User.create({
+            name: data.name,
+            email: data.email,
+            password: data.password
+        })
+
+        await Student.create({
+            college: data.college,
+            user_id: user._id,
+            department_id: dept._id
+        })
+
+    } catch (error) {
+        console.log(error)
+        throw error
+    }
+
 }
