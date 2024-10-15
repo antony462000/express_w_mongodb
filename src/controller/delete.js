@@ -1,14 +1,14 @@
-const _delete = require("../services/delete")
-const responder = require("../shared/responder")
+const deleteUser = require("../services/delete")
+const Responder = require("../shared/responder")
 
 module.exports = async (req, res) => {
-    const Responder = new responder(res)
+    const responder = new Responder(res)
     try {
         req['body']._id = req.user._id
-        var deleteUser = await _delete(req.body)
-        Responder.success({ message: "Success", payload: deleteUser })
+        var result = await deleteUser(req.body)
+         return responder.success({ message: "Success", payload: result })
 
     } catch (error) {
-        Responder.fail(error.message)
+       return responder.fail(error.message)
     }
 }

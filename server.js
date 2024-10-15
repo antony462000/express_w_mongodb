@@ -1,13 +1,14 @@
-const express = require ("express")
+const express = require("express")
 const router = require("./src/router")
 const app = express()
-const port = 3000
+const bodyParser = require("body-parser")
+
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
-app.use(express.urlencoded({extended:false}))
+const port = 3000
+app.listen(port, () => {
+  console.log(`localhost listening at http://localhost:${port}/`)
+})
 
+app.use("/user", router)
 
- app.listen(port,()=>{
-      console.log(`localhost listening at http://localhost:${port}/`)
-        })
-
-app.use("/user",router)

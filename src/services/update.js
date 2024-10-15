@@ -42,7 +42,6 @@ module.exports = async (data) => {
 
         return { user, students }
     } catch (error) {
-        console.log(error)
         throw error
     }
 

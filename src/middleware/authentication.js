@@ -4,7 +4,7 @@ module.exports=(req,res,next)=>{
     const Responder = new responder(res)
 try {
     const token = req.headers.token
-    if(!token) throw new Error("Token not Recieved")
+    if(!token) throw new Error("Un authorized!")
     const user = verifyToken(token)
     req['user']=user    
     next()

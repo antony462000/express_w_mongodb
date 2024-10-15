@@ -1,0 +1,70 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "workbench.startupEditor": "none",
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "matchingDocuments"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "cmake.configureOnOpen": true,
+  "workbench.editorAssociations": {
+    "*.ttf": "default"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.indentSize": "tabSize",
+  "background.fullscreen": {
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/vlmnacloudstorage.appspot.com/o/706543-download-black-cat-wallpapers-2560x1600.jpg?alt=media&token=5f590cd6-e4a8-41a7-a599-ab158c2e371e"
+    ], // urls of your images
+    "opacity": 0.75, // 0.85 ~ 0.95 recommended
+    "size": "cover", // also css, `cover` to self-adaption (recommended)，or `contain`、`200px 200px`
+    "position": "center", // alias to `background-position`, default `center`
+    "interval": 0 // seconds of interval for carousel, default `0` to disabled.
+  },
+  "background.customImages": [
+    "https://firebasestorage.googleapis.com/v0/b/vlmnacloudstorage.appspot.com/o/706543-download-black-cat-wallpapers-2560x1600.jpg?alt=media&token=5f590cd6-e4a8-41a7-a599-ab158c2e371e"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "window.zoomLevel": 2,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorCustomizations": {
+    "editorUnnecessaryCode.border": "#656363"
+  },
+  "vscode-pets.throwBallWithMouse": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vscode-pets.petColor": "green",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.compactFolders": false,
+  "git.confirmSync": false,
+  "auto-close-tag.disableOnLanguage": [
+    
+],
+"background.styles": [
+    
+    {},
+    {},
+    {}
+]
+}
